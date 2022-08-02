@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
   Switch,
+  TextInput,
 } from 'react-native';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
     this.state = {
       header: 'Home',
       value: true,
+      username: '',
     };
   }
   render() {
@@ -57,6 +59,22 @@ class App extends Component {
             onValueChange={() => this.setState({value: !this.state.value})}
           />
         </View>
+
+        {/* Implement TextInput */}
+        <TextInput
+          value={this.state.username}
+          style={{
+            borderBottomWidth: 1,
+            marginHorizontal: 20,
+            paddingHorizontal: 10,
+            borderRadius: 3,
+            marginTop: 10,
+            backgroundColor: 'black',
+            color: 'white',
+          }}
+          onChangeText={value => this.setState({username: value})}
+        />
+
         {/* Create button using TouchableOpacity */}
         <TouchableOpacity
           style={{
