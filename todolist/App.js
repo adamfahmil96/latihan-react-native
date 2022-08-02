@@ -1,11 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {Text, View, StatusBar, Image, TouchableOpacity} from 'react-native';
+import {
+  Text,
+  View,
+  StatusBar,
+  Image,
+  TouchableOpacity,
+  Switch,
+} from 'react-native';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      header: 'Home',
+      value: true,
+    };
   }
   render() {
     return (
@@ -23,7 +33,7 @@ class App extends Component {
             elevation: 3,
           }}>
           <Text style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: 25}}>
-            Header
+            {this.state.header}
           </Text>
         </View>
 
@@ -36,6 +46,17 @@ class App extends Component {
           />
         </TouchableOpacity>
 
+        {/* Implement Switch */}
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Switch
+            value={this.state.value}
+            onValueChange={() => this.setState({value: !this.state.value})}
+          />
+        </View>
         {/* Create button using TouchableOpacity */}
         <TouchableOpacity
           style={{
