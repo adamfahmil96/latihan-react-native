@@ -10,6 +10,7 @@ import {
   TextInput,
   ScrollView,
   StyleSheet,
+  Button,
 } from 'react-native';
 
 class App extends Component {
@@ -59,6 +60,15 @@ class App extends Component {
           <Switch
             value={this.state.value}
             onValueChange={() => this.setState({value: !this.state.value})}
+          />
+        </View>
+
+        {/* Implement button from React library */}
+        <View style={{marginHorizontal: 20}}>
+          <Button
+            title="Press Me"
+            color="crimson"
+            onPress={() => console.log('button')}
           />
         </View>
 
