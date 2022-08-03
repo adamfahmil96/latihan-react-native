@@ -9,6 +9,7 @@ import {
   Switch,
   TextInput,
   ScrollView,
+  StyleSheet,
 } from 'react-native';
 
 class App extends Component {
@@ -64,88 +65,52 @@ class App extends Component {
         {/* Implement TextInput */}
         <TextInput
           value={this.state.username}
-          style={{
-            borderWidth: 1,
-            borderColor: 'white',
-            marginHorizontal: 20,
-            paddingHorizontal: 10,
-            borderRadius: 3,
-            marginTop: 10,
-            backgroundColor: 'black',
-            color: 'white',
-          }}
+          style={styles.textInput}
           onChangeText={value => this.setState({username: value})}
         />
 
         {/* Create button using TouchableOpacity */}
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#1abc9c',
-            paddingVertical: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 20,
-            marginHorizontal: 20,
-            borderRadius: 50,
-            elevation: 3,
-          }}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={{color: '#FFFFFF'}}>Yeay Click Me</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
           <Text style={{color: '#FFFFFF'}}>Click Me</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#1abc9c',
-            paddingVertical: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 20,
-            marginHorizontal: 20,
-            borderRadius: 50,
-            elevation: 3,
-          }}>
-          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={{color: '#FFFFFF'}}>Must Click Me</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#1abc9c',
-            paddingVertical: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 20,
-            marginHorizontal: 20,
-            borderRadius: 50,
-            elevation: 3,
-          }}>
-          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={{color: '#FFFFFF'}}>Wokey Click Me</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#1abc9c',
-            paddingVertical: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 20,
-            marginHorizontal: 20,
-            borderRadius: 50,
-            elevation: 3,
-          }}>
-          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#1abc9c',
-            paddingVertical: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 20,
-            marginHorizontal: 20,
-            borderRadius: 50,
-            elevation: 3,
-          }}>
+        <TouchableOpacity style={styles.button}>
           <Text style={{color: '#FFFFFF'}}>Click Me</Text>
         </TouchableOpacity>
       </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#1abc9c',
+    paddingVertical: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+    marginHorizontal: 20,
+    borderRadius: 50,
+    elevation: 3,
+  },
+  textInput: {
+    borderWidth: 1,
+    borderColor: 'white',
+    marginHorizontal: 20,
+    paddingHorizontal: 10,
+    borderRadius: 3,
+    marginTop: 10,
+    backgroundColor: 'black',
+    color: 'white',
+  },
+});
 
 export default App;
