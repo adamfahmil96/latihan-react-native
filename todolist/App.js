@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Switch,
   TextInput,
+  ScrollView,
 } from 'react-native';
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
   }
   render() {
     return (
-      <View style={{flex: 1}}>
+      <ScrollView style={{flex: 1}}>
         {/* Create StatusBar */}
         <StatusBar barStyle="light-content" backgroundColor="#2c3e50" />
 
@@ -64,7 +65,8 @@ class App extends Component {
         <TextInput
           value={this.state.username}
           style={{
-            borderBottomWidth: 1,
+            borderWidth: 1,
+            borderColor: 'white',
             marginHorizontal: 20,
             paddingHorizontal: 10,
             borderRadius: 3,
@@ -89,7 +91,59 @@ class App extends Component {
           }}>
           <Text style={{color: '#FFFFFF'}}>Click Me</Text>
         </TouchableOpacity>
-      </View>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#1abc9c',
+            paddingVertical: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 20,
+            marginHorizontal: 20,
+            borderRadius: 50,
+            elevation: 3,
+          }}>
+          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#1abc9c',
+            paddingVertical: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 20,
+            marginHorizontal: 20,
+            borderRadius: 50,
+            elevation: 3,
+          }}>
+          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#1abc9c',
+            paddingVertical: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 20,
+            marginHorizontal: 20,
+            borderRadius: 50,
+            elevation: 3,
+          }}>
+          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#1abc9c',
+            paddingVertical: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 20,
+            marginHorizontal: 20,
+            borderRadius: 50,
+            elevation: 3,
+          }}>
+          <Text style={{color: '#FFFFFF'}}>Click Me</Text>
+        </TouchableOpacity>
+      </ScrollView>
     );
   }
 }
